@@ -1,12 +1,10 @@
 
-.nav-items{
-  justify-content: center;
-}
-
 .pages{
   list-style-type: none;
+  justify-content: left;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 	margin: 0;
@@ -87,7 +85,7 @@ nav a:hover::before {
 
 .big-logo{
   font-size: 50px;
-  font-family: ;
+  font-family:'Roboto';
   color:#000000;
 
 }
@@ -104,4 +102,31 @@ nav a:hover::before {
 .nav-names{
   text-align: center;
 
+}
+
+.pages-hanover{
+  text-align: left;
+  float:left;
+}
+
+.player-list{
+  list-style-type: none;
+  
+
+}
+
+.school-logo{
+  float:left;
+  width:115px;
+  height:65px;
+}
+
+.home-image{
+  width:1524px;
+  height:485px;
+}
+
+.instagram-logo{
+  width:200px;
+  height:200px;
 }
