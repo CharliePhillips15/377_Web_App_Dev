@@ -1,9 +1,4 @@
 
-.pages{
-  list-style-type: none;
-  justify-content: left;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
@@ -11,11 +6,6 @@ body {
 	background: #FFFFFF;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 800;
-}
-
-.container {
-	width: 80%;
-	margin: 0 auto;
 }
 
 header {
@@ -28,19 +18,8 @@ header::after {
   clear: both;
 }
 
-.logo {
-  float: left;
-  padding: 10px 0;
-}
-
 nav {
-  float: right;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  text-align: center;
 }
 
 nav li {
@@ -63,31 +42,10 @@ nav a:hover {
   color: #FFFFFF;
 }
 
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #000000
-  ;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-  width: 100%;
-}
-
-
-
 .big-logo{
   font-size: 50px;
   font-family:'Roboto';
   color:#000000;
-
 }
 
 .town-logo{
@@ -109,10 +67,9 @@ nav a:hover::before {
   float:left;
 }
 
-.player-list{
+#player_list{
+  text-align: center;
   list-style-type: none;
-  
-
 }
 
 .school-logo{
@@ -129,4 +86,17 @@ nav a:hover::before {
 .instagram-logo{
   width:200px;
   height:200px;
+}
+
+.player-photo{
+  width:200px;
+  height: 250px;
+}
+
+h2{
+  color: blue;
+}
+
+.sources-page{
+  text-align:center;
 }
