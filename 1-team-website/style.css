@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .big-logo{
@@ -99,4 +99,8 @@ h2{
 
 .sources-page{
   text-align:center;
+}
+
+p{
+  text-align: center;
 }
