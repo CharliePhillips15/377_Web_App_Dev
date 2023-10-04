@@ -5,15 +5,8 @@ body {
     font-family: Tahoma, sans-serif;
 }
 
-
-.container {
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-}
-
 h2 {
-    color: #007bff;
+    color: darkblue;
 }
 
 form {

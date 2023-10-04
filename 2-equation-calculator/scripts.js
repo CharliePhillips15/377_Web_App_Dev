@@ -15,12 +15,8 @@ function calculateForce(){
     var mass = document.forms[1].elements['mass'].value;
     var acceleration = document.forms[1].elements['acceleration'].value;
     var force = mass * acceleration ;
-    if(isNaN(force)){
-        document.getElementById('force').innerHTML = 'Need More Values';
-
-    }else{
     document.getElementById('force').innerHTML = "The Force is " + force + " (N)";
-    }
+    
 }
 
 function calculateKineticEnergy(){
