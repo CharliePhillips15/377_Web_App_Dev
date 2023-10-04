@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="scripts.js"></script>
+    <h1 class="title">Physics Calculations</h1>
+  </head>
+    <body>   
+      <div class="container">
+      <form>
+        <h2>Acceleration</h2>
+        Initial Velocity (m/s): <input name="velocityi"><br><br>
+        Final Velocity (m/s): <input name="velocityf"><br><br>
+        Time (s): <input name="time"><br><br>
+        <input value="Calculate Acceleration" type="button" onclick="calculateAcceleration()"><br><br>
+        <div id="acceleration">Your Answer Will Appear Here</div>
+      </form>
+      <br>
+      <br>
+      <br>
+      <form>
+        <h2>Force</h2>
+        Mass (kg): <input name="mass"><br><br>
+        Acceleration (m/s²): <input name="acceleration"><br><br>
+        <input value="Calculate Force" type="button" onclick="calculateForce()"><br><br>
+        <div id="force">Your Answer Will Appear Here</div>
+      </form>
+      <br>
+      <br>
+      <br>
+      <form>
+        <h2>Kinetic Energy</h2>
+        Mass (kg): <input name="mass"><br><br>
+        Velocity (m/s): <input name="velocity"><br><br>
+        <input value="Calculate Kinetic Energy" type="button" onclick="calculateKineticEnergy()"><br><br>
+        <div id="kineticenergy">Your Answer Will Appear Here</div>
+      </form>
+    </div>
+    </body>
+</html>
