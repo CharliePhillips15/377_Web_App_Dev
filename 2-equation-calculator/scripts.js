@@ -26,4 +26,3 @@ function calculateKineticEnergy(){
     document.getElementById('kineticenergy').innerHTML = "The Kinetic Energy is " + kineticEnergy + " (J)";
     
 }
-
