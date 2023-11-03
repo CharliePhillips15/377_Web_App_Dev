@@ -1,0 +1,56 @@
+#gameStart{
+    text-align: center;
+    font-size: 18pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.names{
+    font-size: 25pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#higher{
+    visibility: hidden;
+}
+
+#lower{
+    visibility: hidden;
+}
+
+#same{
+    visibility: hidden;
+}
+
+#title{
+    text-align: center;
+    display:block;
+}
+
+#wholeGame{
+    display: none;
+    text-align: center;
+
+}
+#gameStart{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display:block;
+  
+
+
+}
+
+#instructions{
+    text-align: center;
+    display:block;
+
+}
+
+#container{
+    height: 200px;
+    position: relative;
+
+}
