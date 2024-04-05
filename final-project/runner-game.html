@@ -4,39 +4,39 @@
 <script src="runner-game.js"></script>
 <script src="velocity.min.js"></script>
 
-
-<svg width = "1000" height = "580" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- defs -->
+<div id = "wholeSVG">
+  <svg width = "1000" height = "580" stroke = "#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- defs -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- symbols -->
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- symbols -->
- 
-  <symbol id="sym-btn-0">
-    <rect x="-40" y="10" width="80" height="22" rx="5" ry="4" class="blankbtn"/>
-    <text id="txt-btn-0" x="-1" y="5" class="tx12 fnavy txc">Start</text>
-  </symbol>
+    <symbol id="sym-btn-0">
+      <rect x="-40" y="10" width="80" height="22" rx="5" ry="4" class="blankbtn"/>
+      <text id="txt-btn-0" x="-1" y="5" class="tx12 fnavy txc">Start</text>
+    </symbol>
 
-  <!-- Entire puzzle in a group element, in case we want to move or hide it -->
-  <g id="svg-content">
-    <rect x="0" y="0" width="1000" height="580" stroke="#6e8196" fill="none"/>
-    <use id="btn-start" class="clickable" onclick="btnStartClicked(evt)" href="#sym-btn-0" x="500" y="375" visibility="visible" />
-    <!-- <image id = "game-background" x = "0" y = "0" href = "https://i.pinimg.com/originals/0b/b8/00/0bb80038e2fa7ecb8fe33a837d67f0ad.jpg" visibility = "hidden"></image> -->
-    <image id = "game-background" x = "0" y = "0" href = "https://wallpapercave.com/uwp/uwp2027237.gif" visibility = "hidden"></image>
+    <!-- Entire puzzle in a group element, in case we want to move or hide it -->
+    <g id="svg-content">
+      <rect x="0" y="0" width="1000" height="580" stroke="#000000" fill="none"/>
+      <use id="btn-start" class="clickable" onclick="btnStartClicked(evt)" href="#sym-btn-0" x="500" y="375" visibility="visible" />
+      <image id = "game-background" width = "100%" x = "0" y = "0" href = "https://etc.usf.edu/presentations/backgrounds/grid/grid_03/1207m.gif" visibility = "hidden"></image>
+      <!-- <image id = "game-background2" width = "100%" x = "1000" y = "0" href = "https://etc.usf.edu/presentations/backgrounds/grid/grid_03/1207m.gif" visibility = "hidden"></image> -->
 
-    <image id = "game-ground" x = "0" y = "400" href = "https://static.vecteezy.com/system/resources/previews/023/527/084/original/pixel-grass-and-ground-blocks-game-background-vector.jpg" width = "15%" visibility = "hidden"></image>
+    </g>
 
-    <image id = "game-runner" x = "10" y = "425" href = "https://i.pinimg.com/originals/16/52/1a/16521ad871a50d95e6ea8fb083d6871c.gif" width = "15%" visibility = "hidden"></image>
-    <text id="txt-01" x="500" y="70" class="fver tx32 f02 txc">Runner</text>
-    <text id="txt-02" x="500" y="105" class="tx16 f03 txc">fill</text>
-    <text id="txt-03" x="500" y="150" class="tx16 f01 txc">fill </text>
-    <text id="txt-04" x="500" y="175" class="tx16 f01 txc">fill</text>
-    <text id="txt-05" x="500" y="225" class="tx16 f01 txc">fill</text>
-    <text id="txt-06" x="500" y="250" class="tx16 f01 txc">fill</text>
-    <text id="txt-07" x="500" y="300" class="tx16 f01 txc">fill</text>
-    <text id="txt-08" x="500" y="325" class="tx16 f01 txc">fill</text>
-   
-
-   
-
-  </g>
-</svg>
+      <text id = "score" x = "200" y = "200" visibility = "hidden">Score</text>
+      <rect id = "ground" x = "0" y = "500" width = "1000" height = "200" fill = "white" stroke = "#000000" visibility = "hidden"></rect>
+      <rect id = "ground" x = "0" y = "1000" width = "1000" height = "200" fill = "white" stroke = "#000000" visibility = "hidden"></rect>
+      <image id = "game-runner" x = "50" y = "320" href = "https://media.tenor.com/EJQvxUMk__MAAAAj/runner.gif" width = "15%" visibility = "hidden"></image>
+      <text id="txt-01" x="500" y="70" class="fver tx32 f02 txc">Run From Cole</text>
+      <text id="txt-02" x="500" y="105" class="tx16 f03 txc">The objective of the game is to not get hit by Cole. </text>
+      <text id="txt-03" x="500" y="150" class="tx16 f01 txc">fill </text>
+      <text id="txt-04" x="500" y="175" class="tx16 f01 txc">fill</text>
+      <text id="txt-05" x="500" y="225" class="tx16 f01 txc">fill</text>
+      <text id="txt-06" x="500" y="250" class="tx16 f01 txc">fill</text>
+      <text id="txt-07" x="500" y="300" class="tx16 f01 txc">fill</text>
+      <text id="txt-08" x="500" y="325" class="tx16 f01 txc">fill</text>
+    
+  </svg>
+</div>
