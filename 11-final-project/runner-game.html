@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="runner-style.css" />
+<link rel="stylesheet" type="text/css" href="runner-game.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="runner-game.js"></script>
+<script src="velocity.min.js"></script>
+
+<div id = "wholeSVG">
+  <svg width = "1000" height = "580" stroke = "#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- defs -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- symbols -->
+  
+    <symbol id="sym-btn-0">
+      <rect x="-40" y="10" width="80" height="22" rx="5" ry="4" class="blankbtn"/>
+      <text id="txt-btn-0" x="-1" y="5" class="tx12 fnavy txc">Start</text>
+    </symbol>
+
+    <!-- Entire puzzle in a group element, in case we want to move or hide it -->
+    <g id="svg-content">
+      <rect x="0" y="0" width="1000" height="580" stroke="#000000" fill="none"/>
+      <use id="btn-start" class="clickable" onclick="btnStartClicked(evt)" href="#sym-btn-0" x="500" y="375" visibility="visible" />
+      <image id = "game-background" width = "1000" x = "0" y = "0" href = "background.jpg" visibility = "hidden"></image>
+
+      <image id = "game-background2" width = "1000" x = "1000" y = "0" href = "background.jpg" visibility = "hidden"></image>
+
+    </g>
+
+      <text id = "score" x = "10" y = "25" visibility = "hidden">Score</text>     
+      <image id = "game-runner" x = "100" y = "325" href = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a7c26ff5-b770-4b9c-9afd-5c52d505dbf8/dczvblc-083fca77-1bc1-434a-b13f-00c319eabf45.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E3YzI2ZmY1LWI3NzAtNGI5Yy05YWZkLTVjNTJkNTA1ZGJmOFwvZGN6dmJsYy0wODNmY2E3Ny0xYmMxLTQzNGEtYjEzZi0wMGMzMTllYWJmNDUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wsOe4c3chaVU0nRXTTIsovdjNBhoiCvOPka9JXeRfNs" width = "15%" visibility = "hidden"></image>
+      <text id="txt-01" x="500" y="70" class="fver tx32 f02 txc">InfiniteSuperb Mario</text>
+      <text id="txt-02" x="500" y="105" class="tx16 f03 txc">The objective of the game is to not get hit by Cole. </text>
+      <text id="txt-03" x="500" y="150" class="tx16 f01 txc">fill </text>
+      <text id="txt-04" x="500" y="175" class="tx16 f01 txc">fill</text>
+      <text id="txt-05" x="500" y="225" class="tx16 f01 txc">fill</text>
+      <text id="txt-06" x="500" y="250" class="tx16 f01 txc">fill</text>
+      <text id="txt-07" x="500" y="300" class="tx16 f01 txc">fill</text>
+      <text id="txt-08" x="500" y="325" class="tx16 f01 txc">fill</text>
+      <image visibility = "hidden"  x = "50%" y = "377" width = "10%" id = "goomba" href = "goomba4.webp"></image>
+      <image visibility = "hidden" x = "200" y = "370" width = "15%" id = "bomb" href = "bomb.png"></image>
+      <image visibility = "hidden"  x = "300" y = "350" width = "13%" id = "pipe" href = "pipe.png" ></image>
+    
+  </svg>
+</div>  
+
