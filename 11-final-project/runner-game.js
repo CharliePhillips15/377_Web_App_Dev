@@ -1,7 +1,8 @@
 let score = 0
 let win = 10000
-let backgroundMove = 2;
-let backgroundXChange = 998;
+let backgroundMove = 3;
+let backgroundXChange = 997;
+let obstacleMove = 3;
 
 document.addEventListener('keydown', function(event) {
   if (event.keyCode === 32) {
@@ -86,8 +87,12 @@ function moveBackGrounds(){
 }
 function game(){
   keepScore();
-  setInterval(moveGame, 1);
   requestAnimationFrame(gameLoop); 
+
+  setTimeout(function(){
+    setInterval(moveGame, 1);
+  },2000);
+
 }
 
 function gameLoop() {
@@ -101,11 +106,12 @@ let jumpVelocity;
 function moveGame(){
   moveBackGrounds();
   moveObstacle();
+  changeSpeed();
 }
 function characterJump() {
   if (!isJumping) {
     isJumping = true;
-    jumpVelocity = 21; 
+    jumpVelocity = 22; 
   }
 }
 
@@ -130,11 +136,14 @@ function createObstacle(){
   let randomNumber = Math.random();
   let obstacleNumber = Math.floor(randomNumber * 3) + 1;
   if (obstacleNumber == 1){
-    newObstacle = $("#bomb");
+    newObstacle = $("#shell");
+    obstacleMove = 4.5;
   }else if(obstacleNumber == 2){
     newObstacle = $("#goomba");
+    obstacleMove = 4;
   }else if(obstacleNumber == 3){
     newObstacle = $("#pipe");
+    obstacleMove = 3;
   }
   newObstacle.attr("x", 1200);
   newObstacle.attr("visibility" , "visible")
@@ -148,7 +157,7 @@ function moveObstacle(){
   }
   
   obstacleX = parseInt(newObstacle.attr("x"));
-  newObstacle.attr("x" , obstacleX - backgroundMove);
+  newObstacle.attr("x" , obstacleX - obstacleMove);
 
   checkObstacle();
 }
