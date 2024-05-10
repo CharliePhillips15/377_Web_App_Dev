@@ -3,6 +3,7 @@ let win = 10000
 let backgroundMove = 3;
 let backgroundXChange = 997;
 let obstacleMove = 3;
+let playingStatus = true;
 
 document.addEventListener('keydown', function(event) {
   if (event.keyCode === 32) {
@@ -93,6 +94,9 @@ function game(){
     setInterval(moveGame, 1);
   },2000);
 
+  if (playingStatus == false){
+    return;
+  }
 }
 
 function gameLoop() {
@@ -106,7 +110,7 @@ let jumpVelocity;
 function moveGame(){
   moveBackGrounds();
   moveObstacle();
-  changeSpeed();
+  collision();
 }
 function characterJump() {
   if (!isJumping) {
@@ -134,7 +138,7 @@ let obstacleX;
 
 function createObstacle(){
   let randomNumber = Math.random();
-  let obstacleNumber = Math.floor(randomNumber * 3) + 1;
+  let obstacleNumber = Math.floor(randomNumber * 4) + 1;
   if (obstacleNumber == 1){
     newObstacle = $("#shell");
     obstacleMove = 4.5;
@@ -144,6 +148,7 @@ function createObstacle(){
   }else if(obstacleNumber == 3){
     newObstacle = $("#pipe");
     obstacleMove = 3;
+  }else{
   }
   newObstacle.attr("x", 1200);
   newObstacle.attr("visibility" , "visible")
@@ -160,6 +165,8 @@ function moveObstacle(){
   newObstacle.attr("x" , obstacleX - obstacleMove);
 
   checkObstacle();
+
+  
 }
 
 function checkObstacle(){
@@ -170,8 +177,35 @@ function checkObstacle(){
   }
 }
 
+function afterLogin(){
+  $("#wholeSvg").attr("style" , "display: visible;");
+  $("#wholeSvg").attr("visibility" , "visible");
+  $("#btn-start").attr("visibility", "visible");
+  console.log("working");
+}
+
+function collision(){
+  let marioX = parseInt($("#game-runner").attr("x"));
+  let marioY = parseInt($("#game-runner").attr("y"));
+  let marioWidth = parseInt($("#game-runner").attr("width"));
+  let marioHeight = parseInt($("#game-runner").attr("height"));
+  let marioPointOne = marioX;
+  let marioPointTwo = marioX + marioWidth;
+  let obstacleX = parseInt(newObstacle.attr("x"));
+  let obstacleY = parseInt(newObstacle.attr("y"));
 
 
+  if(obstacleX >= marioPointOne && obstacleX <= marioPointTwo ) {
+    // add y value check
+      playingStatus = false;
+      
+    }
+  }
 
+function endGame(){
+  console.log("YAYAYAYAy");
+  //add stopage of the game and keep track of the score
+  
+}
 
 

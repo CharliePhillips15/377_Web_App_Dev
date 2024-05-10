@@ -1,0 +1,38 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+            function calculateStats(){
+                var height = document.forms[0].elements['height'].value;
+                var width = document.forms[0].elements['width'].value;
+                var area= height * width;
+                var perimeter = 2 * height + 2 * width;
+                document.getElementById('results').innerHTML = 
+                '<table>' + 
+                    '<tr>' +
+                        '<td>Area</td>' +
+                        '<td>' + area + '</td>' +
+                        '<tr>' +
+                        '<tr>' +
+                            '<td>Perimiter</td>' +
+                        '<td>' + perimeter + '</td>' +
+                    '<tr>' +
+                '<table>';
+                console.log('Hello Console');
+
+            }
+
+    </script>
+    <head>
+        <h1>Calculating Area</h1><br><br>
+    </head>
+    <form>
+    <body>
+        Height: <input name="height"><br><br>
+        Width: <input name="width"><br><br>
+        <input value="Calculate" type="button" onclick="calculateStats()"><br><br>
+        <div id="results">Your Answer Will Appear Here</div>
+    </body>
+    </form>
+
+</html>

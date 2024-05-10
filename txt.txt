@@ -1,0 +1,34 @@
+function higher() {
+  if (deck.length === 0) {
+    // No more cards in the deck
+    $("#instruction").text("No cards left in the deck.");
+    return;
+  }
+
+  if (deck[0].value > cardsOnScreen[clickedCard].value) {
+    $("#card" + clickedCard).attr("href", deck[0].href);
+    deck.shift();
+    $("#instruction").text("Correct! Pick another Card");
+    $("#cardsLeft").text("Cards Left: " + deck.length);
+  } else {
+    $("#card" + clickedCard).attr("href", blankCard.href);
+    $("#instruction").text("Wrong! Pick another Card");
+  }
+}
+
+function lower() {
+  if (deck.length === 0) {
+    $("#instruction").text("No cards left in the deck.");
+    return;
+  }
+
+  if (deck[0].value < cardsOnScreen[clickedCard].value) {
+    $("#card" + clickedCard).attr("href", deck[0].href);
+    deck.shift();
+    $("#instruction").text("Correct! Pick another Card");
+    $("#cardsLeft").text("Cards Left: " + deck.length);
+  } else {
+    $("#card" + clickedCard).attr("href", blankCard.href);
+    $("#instruction").text("Wrong! Pick another Card");
+  }
+}

@@ -1,0 +1,74 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <script>
+            function login(){
+                alert('Access Denied')
+            }
+
+            
+            function register(){
+                var username = document.forms[1].elements['username'].value;
+                if (username == ''){
+                    alert('Username is required')
+                }else{
+                    alert('Success')
+                }
+
+                var terms= document.forms[1].elements['agreement'].checked;
+                if(!terms){
+                    alert('You must agree to the terms of service');
+                }
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Form Examples</h1>
+        <br>
+        <h2>Login Form</h2>
+        <form>
+            Username: <input name="username" type="text" placeholder="Enter Social Security ">
+            <br>
+            <br>
+            Password: <input name="password" type="password" placeholder = "Enter Bank Information">
+            <br>
+            <br>    
+            <input value="Login" type="button" onclick="login()">
+            <input type="reset"><br><br>
+
+        </form>
+          <br>
+          <h2>User Registration Form</h2>
+        <form >
+            Firstname: <input name="firstname" placeholder="Firstname"><br><br>
+            Lastname: <input name="lastname" placeholder="Lastname"><br><br>
+            Username: <input name="username" placeholder="Username"><br><br>
+            Email: <input name="email" type="email"><br><br>
+            Birthday: <input name="birthday" type="date"><br><br>
+
+            I am a
+            <input id="student" name="position" type="radio" value="Teacher"><label for="student">Student</label>
+            <input id="teacher" name="position" type="radio" value="Student"><label for="teacher">Teacher</label><br><br>
+            <input type="reset"><br><br>
+            
+
+            Select Your School:
+            <select>
+                <option selected hidden></option>
+                <option>Cedar</option>
+                <option>Center</option>
+                <option>Middle School</option>
+                <option>High School</option>
+            </select>
+            <br>
+            <br>
+
+            <input id="terms" name="agreement" type="checkbox"><label for="terms">I agree to the terms of service</label><br><br>
+            <input value="Create Account" type="button" onclick="register()">
+
+        </form>
+
+    </body>
+</html>
