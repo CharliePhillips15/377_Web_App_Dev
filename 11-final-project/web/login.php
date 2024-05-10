@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($password === $hashed_password) {
                 $_SESSION["username"] = $username;
-                echo "Login successful. Redirecting...";
                 header("Location: index.html"); 
                 exit();
 
